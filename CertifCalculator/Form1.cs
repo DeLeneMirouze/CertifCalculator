@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CertifCalculator
@@ -36,6 +30,7 @@ namespace CertifCalculator
             Questions.Value = 0;
             QuestionScore.Value = 0;
             Alerte.Visible = false;
+            Total.Text = Resource1.TestTitle;
         }
 
         void Compute()
@@ -65,38 +60,35 @@ namespace CertifCalculator
             }
         }
 
+        void AddPointToQuestions(int total)
+        {
+            MaxScore.Value += total;
+            Total.Text = $"{Resource1.TestTitle} ({total})";
+            Questions.Value++;
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            this.MaxScore.Value++;
-            Questions.Value++;
+            AddPointToQuestions(1);
             Compute();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            Questions.Value++;
+            AddPointToQuestions(2);
             Compute();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            Questions.Value++;
+            AddPointToQuestions(3);
             Compute();
         }
 
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            this.MaxScore.Value++;
-            Questions.Value++;
+            AddPointToQuestions(4);
             Compute();
         }
 
@@ -156,7 +148,7 @@ namespace CertifCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Questions.Value++;
+            AddPointToQuestions(0);
             QuestionScore.Value++;
         }
 
@@ -175,6 +167,18 @@ namespace CertifCalculator
             {
                 Percent.BackColor = Color.OrangeRed;
             }
+        }
+
+        private void TestScore_Load(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+       
+            //Timer timer = (Timer)sender;
+            //Heure.Text = timer.ToString();
         }
     }
 }
