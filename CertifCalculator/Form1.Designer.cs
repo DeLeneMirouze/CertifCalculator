@@ -75,7 +75,7 @@ namespace CertifCalculator
             // 
             // Total
             // 
-            this.Total.BackColor = System.Drawing.Color.LightBlue;
+            this.Total.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Total.Controls.Add(this.Points);
             this.Total.Controls.Add(this.button1);
             this.Total.Controls.Add(this.MaxScore);
@@ -90,7 +90,7 @@ namespace CertifCalculator
             this.Total.ForeColor = System.Drawing.Color.Black;
             this.Total.Location = new System.Drawing.Point(180, 170);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(312, 510);
+            this.Total.Size = new System.Drawing.Size(312, 404);
             this.Total.TabIndex = 6;
             this.Total.TabStop = false;
             this.Total.Text = "Test";
@@ -106,7 +106,7 @@ namespace CertifCalculator
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 342);
+            this.button1.Location = new System.Drawing.Point(5, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(299, 48);
             this.button1.TabIndex = 12;
@@ -128,7 +128,7 @@ namespace CertifCalculator
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 435);
+            this.label2.Location = new System.Drawing.Point(6, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 20);
             this.label2.TabIndex = 11;
@@ -136,7 +136,7 @@ namespace CertifCalculator
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(176, 243);
+            this.button8.Location = new System.Drawing.Point(175, 184);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(130, 59);
             this.button8.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace CertifCalculator
             // 
             this.Questions.BackColor = System.Drawing.Color.NavajoWhite;
             this.Questions.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Questions.Location = new System.Drawing.Point(6, 459);
+            this.Questions.Location = new System.Drawing.Point(6, 342);
             this.Questions.Name = "Questions";
             this.Questions.Size = new System.Drawing.Size(300, 45);
             this.Questions.TabIndex = 10;
@@ -157,7 +157,7 @@ namespace CertifCalculator
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(6, 243);
+            this.button7.Location = new System.Drawing.Point(5, 184);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(130, 59);
             this.button7.TabIndex = 2;
@@ -167,7 +167,7 @@ namespace CertifCalculator
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(176, 144);
+            this.button6.Location = new System.Drawing.Point(175, 120);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 59);
             this.button6.TabIndex = 1;
@@ -177,7 +177,7 @@ namespace CertifCalculator
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 143);
+            this.button5.Location = new System.Drawing.Point(5, 119);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 59);
             this.button5.TabIndex = 0;
@@ -188,7 +188,7 @@ namespace CertifCalculator
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.Score);
@@ -198,11 +198,12 @@ namespace CertifCalculator
             this.groupBox2.Controls.Add(this.QuestionScore);
             this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(572, 170);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 510);
+            this.groupBox2.Size = new System.Drawing.Size(313, 404);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Votre score";
@@ -218,7 +219,7 @@ namespace CertifCalculator
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(8, 342);
+            this.button2.Location = new System.Drawing.Point(7, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(299, 45);
             this.button2.TabIndex = 12;
@@ -241,7 +242,7 @@ namespace CertifCalculator
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 435);
+            this.label4.Location = new System.Drawing.Point(3, 318);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(193, 20);
             this.label4.TabIndex = 11;
@@ -250,7 +251,7 @@ namespace CertifCalculator
             // button13
             // 
             this.button13.Enabled = false;
-            this.button13.Location = new System.Drawing.Point(178, 241);
+            this.button13.Location = new System.Drawing.Point(178, 189);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(130, 59);
             this.button13.TabIndex = 3;
@@ -261,7 +262,7 @@ namespace CertifCalculator
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(8, 241);
+            this.button12.Location = new System.Drawing.Point(8, 189);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(130, 59);
             this.button12.TabIndex = 2;
@@ -273,7 +274,7 @@ namespace CertifCalculator
             // 
             this.QuestionScore.BackColor = System.Drawing.Color.NavajoWhite;
             this.QuestionScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionScore.Location = new System.Drawing.Point(6, 459);
+            this.QuestionScore.Location = new System.Drawing.Point(6, 342);
             this.QuestionScore.Name = "QuestionScore";
             this.QuestionScore.Size = new System.Drawing.Size(299, 45);
             this.QuestionScore.TabIndex = 10;
@@ -283,7 +284,7 @@ namespace CertifCalculator
             // button10
             // 
             this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(8, 141);
+            this.button10.Location = new System.Drawing.Point(8, 123);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(130, 59);
             this.button10.TabIndex = 0;
@@ -294,7 +295,7 @@ namespace CertifCalculator
             // button11
             // 
             this.button11.Enabled = false;
-            this.button11.Location = new System.Drawing.Point(178, 142);
+            this.button11.Location = new System.Drawing.Point(178, 124);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(130, 59);
             this.button11.TabIndex = 1;
@@ -304,6 +305,7 @@ namespace CertifCalculator
             // 
             // button9
             // 
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(15, 53);
             this.button9.Name = "button9";
@@ -347,17 +349,18 @@ namespace CertifCalculator
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 713);
+            this.textBox1.Location = new System.Drawing.Point(180, 593);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(691, 64);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(705, 105);
             this.textBox1.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(116, 713);
+            this.label6.Location = new System.Drawing.Point(108, 593);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 17);
             this.label6.TabIndex = 15;
@@ -369,7 +372,7 @@ namespace CertifCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(902, 808);
+            this.ClientSize = new System.Drawing.Size(902, 712);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Alerte);

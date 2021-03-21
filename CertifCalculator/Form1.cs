@@ -173,12 +173,5 @@ namespace CertifCalculator
         {
             Reset();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-       
-            //Timer timer = (Timer)sender;
-            //Heure.Text = timer.ToString();
-        }
     }
 }
