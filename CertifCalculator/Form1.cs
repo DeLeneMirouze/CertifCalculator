@@ -186,13 +186,11 @@ namespace CertifCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             AddPointToQuestions(0);
-            QuestionScore.Value++;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AddPointToScore(0);
-            QuestionScore.Value++;
         }
 
         void AdjustColor()
