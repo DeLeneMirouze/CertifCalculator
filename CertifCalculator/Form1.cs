@@ -103,6 +103,7 @@ namespace CertifCalculator
         {
             MaxScore.Value += total;
             Total.Text = $"{Resource1.TestTitle} ({total})";
+            ScoreBox.Text = Resource1.ScoreTitle;
             Questions.Value++;
         }
 
