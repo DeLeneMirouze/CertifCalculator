@@ -40,7 +40,7 @@ namespace CertifCalculator
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ScoreBox = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Score = new System.Windows.Forms.NumericUpDown();
@@ -59,7 +59,7 @@ namespace CertifCalculator
             this.Total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaxScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Questions)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.ScoreBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestionScore)).BeginInit();
             this.SuspendLayout();
@@ -186,27 +186,27 @@ namespace CertifCalculator
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // groupBox2
+            // ScoreBox
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.Score);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Controls.Add(this.button12);
-            this.groupBox2.Controls.Add(this.QuestionScore);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(572, 170);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 404);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Votre score";
+            this.ScoreBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ScoreBox.Controls.Add(this.label5);
+            this.ScoreBox.Controls.Add(this.button2);
+            this.ScoreBox.Controls.Add(this.Score);
+            this.ScoreBox.Controls.Add(this.label4);
+            this.ScoreBox.Controls.Add(this.button13);
+            this.ScoreBox.Controls.Add(this.button12);
+            this.ScoreBox.Controls.Add(this.QuestionScore);
+            this.ScoreBox.Controls.Add(this.button10);
+            this.ScoreBox.Controls.Add(this.button11);
+            this.ScoreBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ScoreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreBox.ForeColor = System.Drawing.Color.Black;
+            this.ScoreBox.Location = new System.Drawing.Point(572, 170);
+            this.ScoreBox.Name = "ScoreBox";
+            this.ScoreBox.Size = new System.Drawing.Size(313, 404);
+            this.ScoreBox.TabIndex = 7;
+            this.ScoreBox.TabStop = false;
+            this.ScoreBox.Text = "Votre score";
             // 
             // label5
             // 
@@ -379,19 +379,20 @@ namespace CertifCalculator
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Percent);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.ScoreBox);
             this.Controls.Add(this.Total);
             this.Name = "TestScore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestScore";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestScore_FormClosing);
             this.Load += new System.EventHandler(this.TestScore_Load);
             this.Total.ResumeLayout(false);
             this.Total.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaxScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Questions)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.ScoreBox.ResumeLayout(false);
+            this.ScoreBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestionScore)).EndInit();
             this.ResumeLayout(false);
@@ -407,7 +408,7 @@ namespace CertifCalculator
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox ScoreBox;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CertifCalculator
@@ -9,7 +12,41 @@ namespace CertifCalculator
         public TestScore()
         {
             InitializeComponent();
+
+            SaveFile = Path.Combine(Path.GetTempPath(), "stateScore.txt");
             Reset();
+        }
+
+        public string SaveFile { get; set; }
+
+        void SaveState()
+        {
+            DisplayScore displayScore = new DisplayScore();
+
+            displayScore.Notes = textBox1.Text;
+            displayScore.ScoreState.Points = Convert.ToInt32(Score.Text);
+            displayScore.ScoreState.Questions = Convert.ToInt32(QuestionScore.Text);
+            displayScore.TestState.Points = Convert.ToInt32(MaxScore.Text);
+            displayScore.TestState.Questions = Convert.ToInt32(Questions.Text);
+
+            string msg = JsonConvert.SerializeObject(displayScore);
+            File.WriteAllText(SaveFile, msg);
+        }
+
+        void LoadState()
+        {
+            if (!File.Exists(SaveFile))
+            {
+                return;
+            }
+            string msg = File.ReadAllText(SaveFile);
+            DisplayScore displayScore = JsonConvert.DeserializeObject<DisplayScore>(msg);
+
+            textBox1.Text = displayScore.Notes;
+            Score.Text = displayScore.ScoreState.Points.ToString();
+            QuestionScore.Text = displayScore.ScoreState.Questions.ToString();
+            MaxScore.Text = displayScore.TestState.Points.ToString();
+            Questions.Text = displayScore.TestState.Questions.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -31,6 +68,8 @@ namespace CertifCalculator
             QuestionScore.Value = 0;
             Alerte.Visible = false;
             Total.Text = Resource1.TestTitle;
+            ScoreBox.Text = Resource1.ScoreTitle;
+            textBox1.Text = "";
         }
 
         void Compute()
@@ -67,6 +106,13 @@ namespace CertifCalculator
             Questions.Value++;
         }
 
+        void AddPointToScore(int total)
+        {
+            Score.Value += total;
+            ScoreBox.Text = $"{Resource1.ScoreTitle} ({total})";
+            QuestionScore.Value++;
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             AddPointToQuestions(1);
@@ -94,35 +140,25 @@ namespace CertifCalculator
 
         private void button10_Click(object sender, EventArgs e)
         {
-            this.Score.Value++;
-            QuestionScore.Value++;
+            AddPointToScore(1);
             Compute();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            this.Score.Value++;
-            this.Score.Value++;
-            QuestionScore.Value++;
+            AddPointToScore(2);
             Compute();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            this.Score.Value++;
-            this.Score.Value++;
-            this.Score.Value++;
-            QuestionScore.Value++;
+            AddPointToScore(3);
             Compute();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            this.Score.Value++;
-            this.Score.Value++;
-            this.Score.Value++;
-            this.Score.Value++;
-            QuestionScore.Value++;
+            AddPointToScore(4);
             Compute();
         }
 
@@ -154,6 +190,7 @@ namespace CertifCalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            AddPointToScore(0);
             QuestionScore.Value++;
         }
 
@@ -172,6 +209,12 @@ namespace CertifCalculator
         private void TestScore_Load(object sender, EventArgs e)
         {
             Reset();
+            LoadState();
+        }
+
+        private void TestScore_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveState();
         }
     }
 }

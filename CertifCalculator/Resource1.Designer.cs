@@ -61,6 +61,15 @@ namespace CertifCalculator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Votre Score.
+        /// </summary>
+        internal static string ScoreTitle {
+            get {
+                return ResourceManager.GetString("ScoreTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Test.
         /// </summary>
         internal static string TestTitle {
