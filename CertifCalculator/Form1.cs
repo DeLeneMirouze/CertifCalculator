@@ -99,8 +99,11 @@ namespace CertifCalculator
             }
         }
 
+        public int Point { get; set; }
+
         void AddPointToQuestions(int total)
         {
+            Point = total;
             MaxScore.Value += total;
             Total.Text = $"{Resource1.TestTitle} ({total})";
             ScoreBox.Text = Resource1.ScoreTitle;
@@ -214,6 +217,15 @@ namespace CertifCalculator
         private void TestScore_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveState();
+        }
+
+        private void TestScore_Shown(object sender, EventArgs e)
+        {
+            var reponse = MessageBox.Show("Voulez-vous réinitialiser le formulaire?", "Réinitialiser", MessageBoxButtons.YesNo);
+            if (reponse == DialogResult.Yes)
+            {
+                Reset();
+            }
         }
     }
 }
