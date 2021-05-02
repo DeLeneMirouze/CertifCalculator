@@ -387,7 +387,6 @@ namespace CertifCalculator
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestScore_FormClosing);
             this.Load += new System.EventHandler(this.TestScore_Load);
-            this.Shown += new System.EventHandler(this.TestScore_Shown);
             this.Total.ResumeLayout(false);
             this.Total.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaxScore)).EndInit();
