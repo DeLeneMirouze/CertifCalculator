@@ -103,6 +103,7 @@ namespace CertifCalculator
 
         void AddPointToQuestions(int total)
         {
+            OldScore.Text = Percent.Text;
             Point = total;
             MaxScore.Value += total;
             Total.Text = $"{Resource1.TestTitle} ({total})";
@@ -151,6 +152,7 @@ namespace CertifCalculator
         private void button11_Click(object sender, EventArgs e)
         {
             AddPointToScore(2);
+
             Compute();
         }
 

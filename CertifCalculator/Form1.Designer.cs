@@ -56,6 +56,7 @@ namespace CertifCalculator
             this.Alerte = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.OldScore = new System.Windows.Forms.Label();
             this.Total.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaxScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Questions)).BeginInit();
@@ -366,6 +367,15 @@ namespace CertifCalculator
             this.label6.TabIndex = 15;
             this.label6.Text = "NOTES:";
             // 
+            // OldScore
+            // 
+            this.OldScore.AutoSize = true;
+            this.OldScore.Location = new System.Drawing.Point(864, 27);
+            this.OldScore.Name = "OldScore";
+            this.OldScore.Size = new System.Drawing.Size(16, 17);
+            this.OldScore.TabIndex = 16;
+            this.OldScore.Text = "0";
+            // 
             // TestScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,6 +383,7 @@ namespace CertifCalculator
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(902, 712);
+            this.Controls.Add(this.OldScore);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Alerte);
@@ -429,6 +440,7 @@ namespace CertifCalculator
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label OldScore;
     }
 }
 
