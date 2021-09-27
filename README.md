@@ -1,6 +1,6 @@
 # CertifCalculator
 
-Application dektop pour faciliter le décompte des scores lorsque l'on fait des dumps.
+Application desktop pour faciliter le décompte des scores lorsque l'on fait des dumps.
 
 A chaque question on enregistre le nombre de points attribués (partie gauche du formulaire). A chaque réponse on enregistre le nombre de points marqués (partie droite du formulaire).
 L'application calcule alors le score et l'affiche. Elle affiche également un rappel du score précédent (11).
